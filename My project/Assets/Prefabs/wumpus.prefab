@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 396788211002972780}
   - component: {fileID: 4110103369474676934}
   - component: {fileID: 1373164720569425966}
-  - component: {fileID: -1493852584270795935}
   m_Layer: 0
   m_Name: wumpus
   m_TagString: wumpus
@@ -186,48 +185,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d604f228e5666f4ab9399acb1051923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &-1493852584270795935
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 667825608480841580}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.013409138, y: 0.120681524}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 12.003156, y: 6.103171}
-  m_EdgeRadius: 0
