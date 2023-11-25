@@ -18,8 +18,8 @@ public class mapGeneration : MonoBehaviour
             Debug.LogError("No game objects in the array. Please assign game objects in the Unity editor.");
             return;
         }
-        //SpawnRandomGameObjects();
-        SpawnWumpusInAllRooms(WumpusPrefab);
+        SpawnRandomGameObjects();
+        //SpawnWumpusInAllRooms(WumpusPrefab);
     }
     void SpawnWumpusInAllRooms(GameObject Wumpus)
     {

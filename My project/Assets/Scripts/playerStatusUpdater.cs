@@ -27,21 +27,27 @@ public class playerStatusUpdater : MonoBehaviour
         //set to destory and to add a point
         if (other.gameObject.tag == "pit"){
             health -= 1;
+            Debug.Log("Stepping on pit");
             if(health <= 0){
                 health = 0;
-                healthText.text = health.ToString();    
+                //healthText.text = health.ToString();    
                 Debug.Log("Game Over");
-                SceneManager.LoadScene("YouLose");
+                //SceneManager.LoadScene("YouLose");
             }
+            Debug.Log($"{this.name} triggered with {other.gameObject.name}");
             
-            healthText.text = health.ToString();
+            //healthText.text = health.ToString();
         }
 
         if (other.gameObject.tag == "wumpus"){
             health = 0;
-            healthText.text = health.ToString();
+            //healthText.text = health.ToString();
+            Debug.Log($"{this.name} triggered with {other.gameObject.name}");
+            Debug.Log("Stepping on wumpus");
             Debug.Log("Game Over");
-            SceneManager.LoadScene("YouLose");
+            //Debug.Log($"{this.name} triggered with {other.gameObject.name}");
+            //SceneManager.LoadScene("YouLose");
         }
+        //}
     }
 }

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2776536434394487661}
   - component: {fileID: 1162383514344663919}
   - component: {fileID: -6288206192080683792}
+  - component: {fileID: 3368489549354299456}
   m_Layer: 0
   m_Name: Derpus
   m_TagString: Player
@@ -31,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 241575958090717117}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: dec756bb593663947a1a2c4607ae4c86, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -150,6 +151,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa19739bf94d8524fb9bbe49e3a0b844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrowNum: {fileID: 0}
+  target: {fileID: 6433851674221813585}
+  smoothSpeed: 0.125
 --- !u!50 &2776536434394487661
 Rigidbody2D:
   serializedVersion: 4
@@ -190,7 +194,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthText: {fileID: 0}
+  prompt: {fileID: 0}
 --- !u!114 &-6288206192080683792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241575958090717117}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b53f7b542b0c7d84e8b3c214c7fa0b29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowNum: {fileID: 0}
+  arrow: {fileID: 7036966023934577140, guid: 898a131e7b1982147b84e1952f6f9c71, type: 3}
+  shootDistance: 5
+  shootDirection: {x: -1, y: 0}
+  projectileSpeed: 10
+--- !u!114 &3368489549354299456
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,8 +221,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 241575958090717117}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b53f7b542b0c7d84e8b3c214c7fa0b29, type: 3}
+  m_Script: {fileID: 11500000, guid: d712fb9b62778fc43b20c3d973d0fb05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowNum: {fileID: 0}
-  arrow: {fileID: 7036966023934577140, guid: 898a131e7b1982147b84e1952f6f9c71, type: 3}
+  proximityDistance: 45
+  boxWidth: 95
+  boxHeight: 45

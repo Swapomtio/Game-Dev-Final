@@ -7,6 +7,8 @@ TagManager:
   - pit
   - wumpus
   - arrow
+  - bat
+  - detector
   layers:
   - Default
   - TransparentFX

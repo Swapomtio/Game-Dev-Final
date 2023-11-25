@@ -12,6 +12,8 @@ public class PlayerInput : MonoBehaviour
     DiscreteMovement move;
     ArrowShooter shooter;
     int currNum = 1;
+    [SerializeField] Transform target;  // The game object to follow
+    [SerializeField] float smoothSpeed = 0.125f;  // The smoothness of the camera movement
     
 
     void Awake(){
@@ -61,5 +63,14 @@ public class PlayerInput : MonoBehaviour
             
         }
         
+    }
+    void LateUpdate()
+    {
+        if (target != null)
+        {
+            Vector3 desiredPosition = target.position;
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+            transform.position = smoothedPosition;
+        }
     }
 }
