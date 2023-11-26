@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TextUpdater : MonoBehaviour
 {
     // Start is called before the first frame update
-    string hint = "";
+    [SerializeField] Text hint;
+    string hintStr = "";
+    string defaultStr = "";
     [SerializeField] float proximityDistance = 5f;
     [SerializeField] float boxWidth = 40f;
     [SerializeField] float boxHeight = 20f;
+    int nothing = 1;
 
     void Start()
     {
@@ -19,21 +23,33 @@ public class TextUpdater : MonoBehaviour
     void Update()
     {
         Rect boxRect = new Rect(transform.position.x - boxWidth / 2, transform.position.y - boxHeight / 2, boxWidth, boxHeight);
-        string hint = "";
+        string hintStr = "";
+        string defaultStr = "You don't hear anything";
         GameObject wumpus = GameObject.FindWithTag("wumpus");
         GameObject pit = GameObject.FindWithTag("pit");
         GameObject bat = GameObject.FindWithTag("bat");
 
         if ( pit != null && boxRect.Contains(pit.transform.position)){
-            hint += "There is a pit nearby. ";
+            nothing = 1;
+            hintStr += "There is a pit nearby. ";
         }
         if ( bat != null && boxRect.Contains(bat.transform.position)){
-            hint += "There is a bat nearby. ";
+            nothing = 1;
+            hintStr += "There is a bat nearby. ";
         }
         if ( wumpus != null && boxRect.Contains(wumpus.transform.position)){
-            hint += "There is a wumpus nearby.";
+            nothing = 1;
+            hintStr += "There is a wumpus nearby.";
         }
-        Debug.Log(hint);
+        if(nothing == 1){
+            hint.text = hintStr;
+            nothing = 0;
+        }
+        else{
+            hint.text = defaultStr;
+        }
+        //Debug.Log(hintStr);
+        //hint.text = hintStr;
     }
 
     
