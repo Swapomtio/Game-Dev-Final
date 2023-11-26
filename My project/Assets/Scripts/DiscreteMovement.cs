@@ -5,14 +5,11 @@ using UnityEngine;
 public class DiscreteMovement : MonoBehaviour
 {
     Rigidbody2D rb;
-    [SerializeField] float speed = 10; 
+    [SerializeField] float speed = 10;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-    }
-    void Start()
-    {
-
     }
     public void Movement(Vector3 vel)
     {
@@ -22,6 +19,8 @@ public class DiscreteMovement : MonoBehaviour
     {
         rb.velocity = vel * speed; 
     }
+
+
 
 }
 
