@@ -9,10 +9,16 @@ public class mapGeneration : MonoBehaviour
     [SerializeField] GameObject WumpusPrefab;
     [SerializeField] GameObject BatPrefab;
     [SerializeField] GameObject PitPrefab;
-    [SerializeField] GameObject PlayerPrefab;
+    //[SerializeField] GameObject PlayerPrefab;
+    [SerializeField] GameObject heartDrops;
+    [SerializeField] GameObject arrowDrops;
+    List<int> selectedRoomIndices;
 
     void Start()
     {
+        Rooms = GameObject.FindGameObjectsWithTag("room");
+
+        // Example: Print the names of the rooms
         if (Rooms.Length == 0)
         {
             Debug.LogError("No game objects in the array. Please assign game objects in the Unity editor.");
@@ -25,7 +31,16 @@ public class mapGeneration : MonoBehaviour
     {
         foreach (GameObject room in Rooms)
         {
-            Vector3 spawnPos = room.transform.position;
+            // Get the position of the center of the child object called "square"
+            Transform squareTransform = room.transform.Find("Square");
+            
+            if (squareTransform == null)
+            {
+                Debug.LogError("The child object 'square' not found in the room. Make sure it exists and has the correct name.");
+                return;
+            }
+
+            Vector3 spawnPos = squareTransform.position - new Vector3(0, 1f, 0);
 
             if (Wumpus == null)
             {
@@ -36,16 +51,13 @@ public class mapGeneration : MonoBehaviour
             // Spawn the Wumpus in each room
             GameObject spawnedWumpus = Instantiate(Wumpus, spawnPos, Quaternion.identity);
 
-            // Optionally, you can perform additional operations on the spawned Wumpus
-            // For example, you might want to set its parent to the room
-            // spawnedWumpus.transform.SetParent(room.transform);
         }
     }
 
     void SpawnRandomGameObjects()
     {
         // Check if there are objects to spawn and a prefab is assigned
-        List<int> selectedRoomIndices = new List<int>();
+        selectedRoomIndices = new List<int>();
 
         // Spawn Wumpus
         SpawnObjectInRandomRoom(WumpusPrefab, selectedRoomIndices);
@@ -57,7 +69,11 @@ public class mapGeneration : MonoBehaviour
         SpawnObjectInRandomRoom(PitPrefab, selectedRoomIndices);
 
         // Spawn Player
-        SpawnObjectInRandomRoom(PlayerPrefab, selectedRoomIndices);
+        //SpawnObjectInRandomRoom(PlayerPrefab, selectedRoomIndices);
+
+        SpawnObjectInRandomRoom(heartDrops, selectedRoomIndices);
+
+        SpawnObjectInRandomRoom(arrowDrops, selectedRoomIndices);
     }
 
     void SpawnObjectInRandomRoom(GameObject prefab, List<int> selectedRoomIndices)
@@ -72,9 +88,20 @@ public class mapGeneration : MonoBehaviour
 
         selectedRoomIndices.Add(randomIndex);
 
+
         // Get the position of the center of the chosen game object
         GameObject selectedRoom = Rooms[randomIndex];
-        Vector3 spawnPos = selectedRoom.transform.position;
+
+        // Get the position of the center of the child object called "square"
+        Transform squareTransform = selectedRoom.transform.Find("Square");
+
+        if (squareTransform == null)
+        {
+            Debug.LogError("The child object 'square' not found in the room. Make sure it exists and has the correct name.");
+            return;
+        }
+
+        Vector3 spawnPos = squareTransform.position - new Vector3(0, 1f, 0);
 
         if (prefab == null)
         {
@@ -85,8 +112,5 @@ public class mapGeneration : MonoBehaviour
         // Spawn the object in the center of the room
         GameObject spawnedObject = Instantiate(prefab, spawnPos, Quaternion.identity);
 
-        // Optionally, you can perform additional operations on the spawned object
-        // For example, you might want to set its parent to the chosen game object
-        // spawnedObject.transform.SetParent(selectedRoom.transform);
     }
 }

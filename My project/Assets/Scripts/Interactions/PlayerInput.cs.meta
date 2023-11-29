@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: aa19739bf94d8524fb9bbe49e3a0b844
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - arrowText: {instanceID: 0}
+  - target: {instanceID: 0}
+  - minimapTitle: {instanceID: 0}
+  - minimapImage: {instanceID: 0}
+  - player: {fileID: 241575958090717117, guid: 68b3d532f4d945d4194b851f17ddd4c3, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

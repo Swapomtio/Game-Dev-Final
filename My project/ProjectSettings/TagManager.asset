@@ -9,6 +9,10 @@ TagManager:
   - arrow
   - bat
   - detector
+  - heart
+  - arrow_drop
+  - room
+  - chest
   layers:
   - Default
   - TransparentFX

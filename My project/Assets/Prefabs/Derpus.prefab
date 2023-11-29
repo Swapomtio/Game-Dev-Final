@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 1162383514344663919}
   - component: {fileID: -6288206192080683792}
   - component: {fileID: 3368489549354299456}
+  - component: {fileID: 6778470046695360091}
+  - component: {fileID: 3823433002510091940}
   m_Layer: 0
   m_Name: Derpus
   m_TagString: Player
@@ -33,7 +35,7 @@ Transform:
   m_GameObject: {fileID: 241575958090717117}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 14.91304, y: -3.7606072, z: 0.08968449}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -140,6 +142,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  animationStateChanger: {fileID: 3823433002510091940}
+  body: {fileID: 6433851674221813585}
 --- !u!114 &7865824768790463482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,9 +156,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa19739bf94d8524fb9bbe49e3a0b844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowNum: {fileID: 0}
+  arrowText: {fileID: 0}
   target: {fileID: 6433851674221813585}
   smoothSpeed: 0.125
+  minimapTitle: {fileID: 0}
+  minimapImage: {fileID: 0}
+  player: {fileID: 0}
 --- !u!50 &2776536434394487661
 Rigidbody2D:
   serializedVersion: 4
@@ -194,8 +201,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 365ce40d8f6c0d845995a2aa9238c53a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthText: {fileID: 0}
-  prompt: {fileID: 0}
+  heartSprite: {fileID: 21300000, guid: 2034f94cbd443e04e9d07989519dc078, type: 3}
+  emptyHeartSprite: {fileID: 21300000, guid: def4c99106e559f4ebbcce2412aee2b3, type: 3}
+  heartOne: {fileID: 0}
+  heartTwo: {fileID: 0}
+  heartThree: {fileID: 0}
 --- !u!114 &-6288206192080683792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,9 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b53f7b542b0c7d84e8b3c214c7fa0b29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowNum: {fileID: 0}
   arrow: {fileID: 7036966023934577140, guid: 898a131e7b1982147b84e1952f6f9c71, type: 3}
-  shootDistance: 5
   shootDirection: {x: -1, y: 0}
   projectileSpeed: 10
 --- !u!114 &3368489549354299456
@@ -225,9 +233,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d712fb9b62778fc43b20c3d973d0fb05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proximityDistance: 45
-  boxWidth: 95
-  boxHeight: 45
+  hint: {fileID: 0}
+  boxWidth: 100
+  boxHeight: 50
+--- !u!95 &6778470046695360091
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241575958090717117}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 599da380501ef984d8e04a6bfcffcd20, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3823433002510091940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241575958090717117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc2e23fb4d8ec94b937ded1059a85a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 6778470046695360091}
+  currentState: Idle
 --- !u!1 &6020464853763206772
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,7 +298,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 40, y: 40, z: 1}
+  m_LocalScale: {x: 4000, y: 3500, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6433851674221813585}
@@ -307,7 +350,7 @@ SpriteMask:
   m_BackSortingLayerID: 0
   m_FrontSortingLayer: 1
   m_BackSortingLayer: 0
-  m_FrontSortingOrder: 1
+  m_FrontSortingOrder: 2
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 1
   m_SpriteSortPoint: 0

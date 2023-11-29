@@ -6,6 +6,8 @@ public class DiscreteMovement : MonoBehaviour
 {
     Rigidbody2D rb;
     [SerializeField] float speed = 10;
+    [SerializeField] animationStateChanger animationStateChanger;
+    [SerializeField] Transform body;
 
     void Awake()
     {
@@ -18,6 +20,20 @@ public class DiscreteMovement : MonoBehaviour
     public void MoveRB(Vector3 vel)
     {
         rb.velocity = vel * speed; 
+        if( vel.magnitude > 0)
+        {
+            animationStateChanger.ChangeAnimationState("Walk");
+            if(vel.x < 0)
+            {
+                body.localScale = new Vector3(2,2,1);
+            }
+            else if( vel.x > 0){
+                body.localScale = new Vector3(-2,2,1);
+            }
+        }
+        else{
+            animationStateChanger.ChangeAnimationState("Idle");
+        }
     }
 
 

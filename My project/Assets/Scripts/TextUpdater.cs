@@ -7,9 +7,8 @@ public class TextUpdater : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] Text hint;
-    string hintStr = "";
-    string defaultStr = "";
-    [SerializeField] float proximityDistance = 5f;
+    string hintStr;
+    string defaultStr;
     [SerializeField] float boxWidth = 40f;
     [SerializeField] float boxHeight = 20f;
     int nothing = 1;
@@ -23,8 +22,8 @@ public class TextUpdater : MonoBehaviour
     void Update()
     {
         Rect boxRect = new Rect(transform.position.x - boxWidth / 2, transform.position.y - boxHeight / 2, boxWidth, boxHeight);
-        string hintStr = "";
-        string defaultStr = "You don't hear anything";
+        hintStr = "";
+        defaultStr = "You don't hear anything";
         GameObject wumpus = GameObject.FindWithTag("wumpus");
         GameObject pit = GameObject.FindWithTag("pit");
         GameObject bat = GameObject.FindWithTag("bat");
