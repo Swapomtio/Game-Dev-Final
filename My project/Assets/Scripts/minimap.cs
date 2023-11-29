@@ -15,30 +15,27 @@ public class minimap : MonoBehaviour
     [SerializeField] RectTransform playerMinimap;
     [SerializeField] Transform playerWorld;
 
-    //float minimapRatio
-    float xRatio;
-    float yRatio;
+    float minimapRatio;
+    //float xRatio;
+    //float yRatio;
 
     void Awake(){
         CalculateMapRatio();
     }
     void Start()
     {
-        // Set the initial position of the miniplayer on the minimap
-        
-        //miniPlayer.GetComponent<RectTransform>().anchoredPosition = miniPlayerStartPosition;
     }
 
     void Update()
     {
         playerMinimap.anchoredPosition = minimapPoint_1.anchoredPosition + new Vector2((playerWorld.position.x - worldPoint_1.position.x) * minimapRatio,
-                                         (playerWorld.position.z - worldPoint_1.position.z) * minimapRatio);
+                                         (playerWorld.position.y - worldPoint_1.position.y) * minimapRatio);
     }
     public void CalculateMapRatio(){
 
         //distance world ignoring the Y axis
-        /*Vector3 distanceWorldVector = worldPoint_1.position - worldPoint_2.position;
-        distanceWorldVector.y = 0f;
+        Vector3 distanceWorldVector = worldPoint_1.position - worldPoint_2.position;
+        distanceWorldVector.z = 0f;
         float distanceWorld = distanceWorldVector.magnitude;
 
         //distance minimap
@@ -46,14 +43,8 @@ public class minimap : MonoBehaviour
             Mathf.Pow((minimapPoint_1.anchoredPosition.x - minimapPoint_2.anchoredPosition.x), 2) +
             Mathf.Pow((minimapPoint_1.anchoredPosition.y - minimapPoint_2.anchoredPosition.y), 2));
 
-        minimapRatio = distanceMinimap / distanceWorld;*/
+        minimapRatio = distanceMinimap / distanceWorld;
 
-        // calculate the x ratio
-
-        xRatio = 0;
-
-        // calculate the y ratio
-        yRatio = 0;
     }
 
 

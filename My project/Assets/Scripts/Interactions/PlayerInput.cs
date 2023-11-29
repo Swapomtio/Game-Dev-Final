@@ -20,7 +20,6 @@ public class PlayerInput : MonoBehaviour
     //map
     int mapOpen;
     SpriteRenderer playerSpriteRenderer;
-    [SerializeField] Text minimapTitle; 
     [SerializeField] Image minimapImage;
     [SerializeField] GameObject player;
 
@@ -31,7 +30,6 @@ public class PlayerInput : MonoBehaviour
         playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
         arrowNum = 3;
         mapOpen = 1;
-        minimapTitle.enabled = false;
         minimapImage.enabled = false;
         playerSpriteRenderer.enabled = false;
         arrowText.text = arrowNum.ToString() + " x";
@@ -87,14 +85,12 @@ public class PlayerInput : MonoBehaviour
             Debug.Log("map code");
             if(mapOpen == 1){
                 Debug.Log("Open map");
-                minimapTitle.enabled = true;
                 minimapImage.enabled = true;
                 playerSpriteRenderer.enabled = true;
                 mapOpen = 0;
             }
             else if(mapOpen == 0){
                 Debug.Log("Close map");
-                minimapTitle.enabled = false;
                 minimapImage.enabled = false;
                 playerSpriteRenderer.enabled = false;
                 mapOpen = 1;

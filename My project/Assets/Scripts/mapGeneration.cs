@@ -14,6 +14,10 @@ public class mapGeneration : MonoBehaviour
     [SerializeField] GameObject arrowDrops;
     List<int> selectedRoomIndices;
 
+    [SerializeField] int numArrows = 1;
+    [SerializeField] int numHearts = 1;
+    [SerializeField] int numBats = 2;
+
     void Start()
     {
         Rooms = GameObject.FindGameObjectsWithTag("room");
@@ -63,7 +67,10 @@ public class mapGeneration : MonoBehaviour
         SpawnObjectInRandomRoom(WumpusPrefab, selectedRoomIndices);
 
         // Spawn Bat
+        for (int i = 0; i < numBats; i++)
+        {
         SpawnObjectInRandomRoom(BatPrefab, selectedRoomIndices);
+        }
 
         // Spawn Pit
         SpawnObjectInRandomRoom(PitPrefab, selectedRoomIndices);
@@ -71,9 +78,14 @@ public class mapGeneration : MonoBehaviour
         // Spawn Player
         //SpawnObjectInRandomRoom(PlayerPrefab, selectedRoomIndices);
 
-        SpawnObjectInRandomRoom(heartDrops, selectedRoomIndices);
-
-        SpawnObjectInRandomRoom(arrowDrops, selectedRoomIndices);
+        for (int i = 0; i < numHearts; i++)
+        {
+            SpawnObjectInRandomRoom(heartDrops, selectedRoomIndices);
+        }
+        for (int i = 0; i < numArrows; i++)
+        {
+            SpawnObjectInRandomRoom(arrowDrops, selectedRoomIndices);
+        }
     }
 
     void SpawnObjectInRandomRoom(GameObject prefab, List<int> selectedRoomIndices)

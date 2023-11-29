@@ -13,6 +13,7 @@ public class playerStatusUpdater : MonoBehaviour
     [SerializeField] Image heartTwo;
     [SerializeField] Image heartThree;
 
+    SpriteRenderer otherSpriteRenderer;
     
     // Start is called before the first frame update
     void Start()
@@ -45,7 +46,7 @@ public class playerStatusUpdater : MonoBehaviour
             heartThree.sprite = emptyHeartSprite;  
             health = 0;  
             Debug.Log("Game Over");
-            //SceneManager.LoadScene("YouLose");
+            SceneManager.LoadScene("YouLose");
         }
     }
 
@@ -55,11 +56,21 @@ public class playerStatusUpdater : MonoBehaviour
         //set to destory and to add a point
         if (other.gameObject.tag == "pit"){
             health -= 1;
+            otherSpriteRenderer = other.gameObject.GetComponent<SpriteRenderer>();
+            otherSpriteRenderer.enabled = true;
             Debug.Log("Stepping on pit");
         }
+        if (other.gameObject.tag == "bat"){
+            health -= 1;
+            Debug.Log("Hit a bat");
+        }
+
 
         if (other.gameObject.tag == "wumpus"){
             health = 0;
+            otherSpriteRenderer = other.gameObject.GetComponent<SpriteRenderer>();
+            otherSpriteRenderer.enabled = true;
+            StartCoroutine(WaitAndExecuteNextCommand());
             Debug.Log("Stepping on wumpus");
         }
 
@@ -71,5 +82,15 @@ public class playerStatusUpdater : MonoBehaviour
         
         Debug.Log("Health is " + health);
         
+    }
+    private IEnumerator WaitAndExecuteNextCommand()
+    {
+        yield return new WaitForSeconds(2f);
+
+        // Your next command goes here
+        Debug.Log("Next command after 1 second");
+
+        // Example: Load a new scene
+        // SceneManager.LoadScene("NextScene");
     }
 }

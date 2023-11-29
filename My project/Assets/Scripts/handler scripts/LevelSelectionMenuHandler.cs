@@ -3,10 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class HunterMenuHandler : MonoBehaviour
+public class LevelSelectionMenuHandler : MonoBehaviour
 {
-    public void Derpus(){
-        SceneManager.LoadScene("Level");
+    public void BeginnerLevel(){
+        SceneManager.LoadScene("Beginner Level A");
+    }
+    public void MediumLevel(){
+        SceneManager.LoadScene("Medium Level A");
+    }
+    public void HardLevel(){
+        SceneManager.LoadScene("Hard Level A");
     }
     public void MainMenu(){
         SceneManager.LoadScene("Menu");

@@ -7,7 +7,6 @@ MonoImporter:
   - WumpusPrefab: {fileID: 667825608480841580, guid: b097343962da39d4bb6ecbfe2e78e09c, type: 3}
   - BatPrefab: {fileID: 3683804492362500495, guid: d35be24ea17ea1540b86dd85931a4e7d, type: 3}
   - PitPrefab: {fileID: 8220460604522652248, guid: 89a89fb7a9d27f84191cac9709363206, type: 3}
-  - PlayerPrefab: {fileID: 241575958090717117, guid: 68b3d532f4d945d4194b851f17ddd4c3, type: 3}
   - heartDrops: {fileID: 2133718110229421521, guid: a199893a358a353408c9b0ea83c121c7, type: 3}
   - arrowDrops: {fileID: 4511041853149472610, guid: a77418fdbbd54af428dbaa4cbac3d0ef, type: 3}
   executionOrder: 0

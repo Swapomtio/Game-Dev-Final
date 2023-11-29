@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/YouLose.unity
     guid: 6075cc19f3310e84d88bbe171887b8ca
   - enabled: 1
-    path: Assets/Scenes/HunterSelection.unity
+    path: Assets/Scenes/LevelSelection.unity
     guid: 325c38caafdb348418fc65052d913afd
   - enabled: 1
     path: Assets/Scenes/InstructionMenu.unity
