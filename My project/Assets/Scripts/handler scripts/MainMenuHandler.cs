@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuHandler : MonoBehaviour
 {
     public void PlayGame(){
-        SceneManager.LoadScene("HunterSelection");
+        SceneManager.LoadScene("LevelSelection");
     }
     public void Instructions(){
         SceneManager.LoadScene("InstructionMenu");

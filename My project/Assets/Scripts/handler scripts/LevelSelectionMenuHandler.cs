@@ -9,7 +9,7 @@ public class LevelSelectionMenuHandler : MonoBehaviour
         SceneManager.LoadScene("Beginner Level A");
     }
     public void MediumLevel(){
-        SceneManager.LoadScene("Medium Level A");
+        SceneManager.LoadScene("Middle Level A");
     }
     public void HardLevel(){
         SceneManager.LoadScene("Hard Level A");

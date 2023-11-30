@@ -113,6 +113,7 @@ public class PlayerInput : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         
         if (other.gameObject.tag == "arrow_drop"){
+            GetComponent<AudioSource>().Play();
             arrowNum += 1;
             arrowText.text = arrowNum.ToString() + " x";
             Destroy(other.gameObject);

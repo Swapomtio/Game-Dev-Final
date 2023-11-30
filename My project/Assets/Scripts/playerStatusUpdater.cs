@@ -76,6 +76,7 @@ public class playerStatusUpdater : MonoBehaviour
 
         if (other.gameObject.tag == "heart"){
             health += 1;
+            GetComponent<AudioSource>().Play();
             Destroy(other.gameObject);
             Debug.Log("get a heart");
         }
@@ -86,11 +87,7 @@ public class playerStatusUpdater : MonoBehaviour
     private IEnumerator WaitAndExecuteNextCommand()
     {
         yield return new WaitForSeconds(2f);
-
-        // Your next command goes here
         Debug.Log("Next command after 1 second");
 
-        // Example: Load a new scene
-        // SceneManager.LoadScene("NextScene");
     }
 }

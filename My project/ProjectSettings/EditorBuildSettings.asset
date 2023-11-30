@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 870a39cb54f560b4bb89634b99f0e7bb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
@@ -26,4 +26,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/YouWin.unity
     guid: 421dc67e6a38fc144bc1853999290d22
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/Beginner Level A.unity
+    guid: 507f9c7fdc87cae4bbb316be880864c3
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/Hard Level A.unity
+    guid: 346b88423dc16084e925fbed1924d680
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/Middle Level A.unity
+    guid: 14884102847097d40bdad37cae9d8178
   m_configObjects: {}
