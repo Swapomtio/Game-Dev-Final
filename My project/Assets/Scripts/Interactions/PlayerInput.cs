@@ -74,8 +74,7 @@ public class PlayerInput : MonoBehaviour
                 arrowNum = 0;
                 Debug.Log(arrowNum);
                 arrowText.text = arrowNum.ToString() + " x";
-                Debug.Log("Game Over");
-                //SceneManager.LoadScene("YouLose");
+                StartCoroutine(WaitAndExecuteNextCommand());
             }
             
         }
@@ -119,5 +118,16 @@ public class PlayerInput : MonoBehaviour
             Destroy(other.gameObject);
             Debug.Log("get an arrow");
         }
+    }
+
+    private IEnumerator WaitAndExecuteNextCommand()
+    {
+        yield return new WaitForSeconds(5f);
+        Debug.Log("Next command after 5 seconds");
+        if("YouWin" != SceneManager.GetActiveScene().name){ //check the current scene
+            Debug.Log("Game Over");
+            SceneManager.LoadScene("YouLose");
+        }
+
     }
 }
