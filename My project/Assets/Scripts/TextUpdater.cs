@@ -30,15 +30,15 @@ public class TextUpdater : MonoBehaviour
 
         if ( pit != null && boxRect.Contains(pit.transform.position)){
             nothing = 1;
-            hintStr += "There is a pit nearby. ";
+            hintStr += "You hear a whoosing sound. ";
         }
         if ( bat != null && boxRect.Contains(bat.transform.position)){
             nothing = 1;
-            hintStr += "There is a bat nearby. ";
+            hintStr += "You hear squeaking nearby. ";
         }
         if ( wumpus != null && boxRect.Contains(wumpus.transform.position)){
             nothing = 1;
-            hintStr += "There is a wumpus nearby.";
+            hintStr += "You feel an ominous prescence.";
         }
         if(nothing == 1){
             hint.text = hintStr;

@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -340.7675, y: -123.12125}
-  m_SizeDelta: {x: 160, y: 47.85}
+  m_AnchoredPosition: {x: -340.7688, y: -131.70062}
+  m_SizeDelta: {x: 224.32, y: 46.48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &148257656
 MonoBehaviour:
@@ -182,10 +182,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -278,11 +278,97 @@ RectTransform:
   - {fileID: 1531159891}
   m_Father: {fileID: 903278843}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 269.95502, y: 93.20499}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -325.78253, y: 127.04999}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &630245122
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3683804492362500495, guid: d35be24ea17ea1540b86dd85931a4e7d, type: 3}
+      propertyPath: m_Name
+      value: bat
+      objectReference: {fileID: 0}
+    - target: {fileID: 4437303750123471692, guid: d35be24ea17ea1540b86dd85931a4e7d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4437303750123471692, guid: d35be24ea17ea1540b86dd85931a4e7d, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4437303750123471692, guid: d35be24ea17ea1540b86dd85931a4e7d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4437303750123471692, guid: d35be24ea17ea1540b86dd85931a4e7d, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4437303750123471692, guid: d35be24ea17ea1540b86dd85931a4e7d, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121002923339134059, guid: d35be24ea17ea1540b86dd85931a4e7d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121002923339134059, guid: d35be24ea17ea1540b86dd85931a4e7d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121002923339134059, guid: d35be24ea17ea1540b86dd85931a4e7d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.25000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121002923339134059, guid: d35be24ea17ea1540b86dd85931a4e7d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121002923339134059, guid: d35be24ea17ea1540b86dd85931a4e7d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121002923339134059, guid: d35be24ea17ea1540b86dd85931a4e7d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121002923339134059, guid: d35be24ea17ea1540b86dd85931a4e7d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121002923339134059, guid: d35be24ea17ea1540b86dd85931a4e7d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121002923339134059, guid: d35be24ea17ea1540b86dd85931a4e7d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121002923339134059, guid: d35be24ea17ea1540b86dd85931a4e7d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121002923339134059, guid: d35be24ea17ea1540b86dd85931a4e7d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121002923339134059, guid: d35be24ea17ea1540b86dd85931a4e7d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5976819514659609, guid: d35be24ea17ea1540b86dd85931a4e7d, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d35be24ea17ea1540b86dd85931a4e7d, type: 3}
 --- !u!1 &630918910
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,8 +471,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -263.3875, y: 69.31251}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -253.48624, y: 58.30376}
+  m_SizeDelta: {x: 220.22, y: 51.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &789103182
 MonoBehaviour:
@@ -410,7 +496,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -464,8 +550,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -340.77005, y: -58.74376}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -336.66876, y: -70.74062}
+  m_SizeDelta: {x: 216.11, y: 35.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &886005075
 MonoBehaviour:
@@ -489,10 +575,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -650,10 +736,10 @@ RectTransform:
   - {fileID: 1684829886}
   m_Father: {fileID: 903278843}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 310.78, y: 187.9}
-  m_SizeDelta: {x: 177.39, y: 47.39}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -246.22, y: 187.9}
+  m_SizeDelta: {x: 177.39001, y: 47.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &925554498
 MonoBehaviour:
@@ -781,9 +867,9 @@ RectTransform:
   - {fileID: 1772585760}
   m_Father: {fileID: 903278843}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 253.48624, y: 24.871243}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 467.1731, y: 60.42624}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1100922529
@@ -1036,10 +1122,10 @@ RectTransform:
   - {fileID: 1100922530}
   m_Father: {fileID: 903278843}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000020444395, y: -147.45}
-  m_SizeDelta: {x: 234.54, y: 47.39}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0.0000009536743, y: 43.01248}
+  m_SizeDelta: {x: 234.53998, y: 47.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1137553199
 MonoBehaviour:
@@ -1167,9 +1253,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 903278843}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000038146973, y: 180.2125}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -0.0000038146973, y: -96.787506}
   m_SizeDelta: {x: 265.77, y: 82.34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1150541945
@@ -1250,7 +1336,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 63.518776, y: 95.395004}
+  m_AnchoredPosition: {x: 339.83942, y: 107.92032}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1531159890
@@ -1287,8 +1373,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 27.724949, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 87.86999, y: -25.722479}
+  m_SizeDelta: {x: 215.45, y: 58.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1531159892
 MonoBehaviour:
@@ -1312,11 +1398,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1368,8 +1454,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -340.77, y: -86.46875}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -340.7688, y: -100.52062}
+  m_SizeDelta: {x: 224.32, y: 39.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1572662794
 MonoBehaviour:
@@ -1393,10 +1479,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -1526,8 +1612,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -263.3875, y: -55.449997}
-  m_SizeDelta: {x: 254.47, y: 157.21}
+  m_AnchoredPosition: {x: -253.48624, y: -135.77126}
+  m_SizeDelta: {x: 398.17, y: 305.02}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1772585761
 MonoBehaviour:
@@ -1551,10 +1637,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -1608,8 +1694,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 35.02, y: -134.79248}
-  m_SizeDelta: {x: 285.48, y: 182.1}
+  m_AnchoredPosition: {x: 101.732506, y: -261.385}
+  m_SizeDelta: {x: 391.18, y: 362.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1948044597
 MonoBehaviour:
@@ -1633,10 +1719,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 23
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -1644,13 +1730,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You have been tasked to kill the Wumpus who resides in the maze. There
-    are many dangers that await you in the maze, bats that will transport you to
-    another random room, pits that will hurt you, and the feared Wumpus. You must
-    kill the Wumpus by shooting an arrow at it from up to a one room away. Beware
-    if you can only escape if you kill the Wumpus, so if you use all your arrows,
-    you're trapped and will die. There are hearts and arrows you can find in the
-    maze!
+  m_Text: 'You must kill the Wumpus in the maze. There are many dangers that await
+    you in the maze, bats that will transport you to a random room, pits, and the
+    feared Wumpus. You must kill the Wumpus by shooting an arrow at it from up to
+    a one room away. Beware, you can only escape if you kill the Wumpus, so if you
+    use all your arrows, you''re trapped and will die. '
 --- !u!222 &1948044598
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1693,8 +1777,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -346.56253, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -340.76877, y: -6.93562}
+  m_SizeDelta: {x: 209.27, y: 47.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1994175934
 MonoBehaviour:
@@ -1718,7 +1802,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -1875,3 +1959,4 @@ SceneRoots:
   - {fileID: 630918913}
   - {fileID: 903278843}
   - {fileID: 2034043918}
+  - {fileID: 630245122}
